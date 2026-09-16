@@ -22,7 +22,7 @@ main{
     margin-bottom: 1.5rem;
   }
 
-  & .h1{
+  & h1{
     font: 600 1.5rem/1.25 var(--font-family);
     margin-bottom: .5rem;
   }
@@ -46,6 +46,70 @@ aside{
 
     & span{
       color: var(--text-highlight);
+    }
+  }
+}
+
+@media (max-width: 64rem){
+  #app{
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  main{
+    order: 2;
+    overflow: visible;
+    padding: 3rem 2rem;
+
+    & .main-container{
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+  }
+
+  aside{
+    order: 1;
+    padding: 3rem 2rem;
+
+    & .aside-container{
+      max-width: 42rem;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
+      align-items: center;
+      gap: 2rem;
+
+      & > img{
+        margin-top: 0;
+      }
+    }
+
+    & h2{
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 43rem){
+  main,
+  aside{
+    padding: 2rem 1.25rem;
+  }
+
+  aside{
+    & .aside-container{
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      & > img{
+        max-width: 18rem;
+        margin-inline: auto;
+      }
+    }
+
+    & h2{
+      font-size: 1.75rem;
     }
   }
 }

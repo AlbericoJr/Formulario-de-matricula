@@ -41,7 +41,7 @@ label + .radio-wrapper{
   }
 
   &:hover, &:focus-within{
-    border: 1px solid var(--stroke-default);
+    border-color: var(--stroke-default);
 
 
     & .radio-image{
@@ -58,4 +58,16 @@ label + .radio-wrapper{
     }
   }
 
+}
+
+@media (max-width: 43rem){
+  .radio-wrapper{
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  }
+}
+
+@media (max-width: 24rem){
+  .radio-wrapper{
+    grid-template-columns: 1fr;
+  }
 }

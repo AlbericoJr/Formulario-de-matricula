@@ -24,3 +24,23 @@ fieldset + fieldset{
   display: flex;
   gap: 1rem;
 }
+
+@media (max-width: 43rem){
+  form{
+    margin-top: 2rem;
+  }
+
+  fieldset{
+    gap: 1.25rem;
+  }
+
+  fieldset + fieldset,
+  .terms-wrapper,
+  .actions-wrapper{
+    margin-top: 2.5rem;
+  }
+
+  .actions-wrapper{
+    flex-direction: column-reverse;
+  }
+}

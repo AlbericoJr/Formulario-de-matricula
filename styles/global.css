@@ -25,6 +25,7 @@
 }
 
 body{
+  min-width: 320px;
   overflow: hidden;
 
   font: var(--text);
@@ -50,4 +51,16 @@ img{
 
 .flex-2{
   flex: 2;
+}
+
+@media (max-width: 64rem){
+  body{
+    overflow: auto;
+  }
+}
+
+@media (max-width: 43rem){
+  .flex{
+    flex-direction: column;
+  }
 }

@@ -3,6 +3,7 @@ textarea,
 select {
   appearance: none;
   width: 100%;
+  min-width: 0;
   border-radius: .5rem;
   border: 2px solid transparent;
   outline: 1px solid var(--stroke-default);
@@ -55,6 +56,13 @@ select{
 
 .address .flex{
   gap: 1.25rem;
+}
+
+.input-wrapper,
+.select-wrapper,
+.textarea-wrapper,
+.droparea-wrapper{
+  min-width: 0;
 }
 
 .input-wrapper:has([disabled]){
